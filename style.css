@@ -908,7 +908,7 @@ body {
 }
 
 .site-content {
-	max-width: 1080px;
+	/*max-width: 1080px;*/
 	margin: 0 auto;
 }
 .site-content a{
@@ -946,7 +946,7 @@ body {
 		        flex: 1 0 100%;
 	}
 
-	media screen and (min-width: 900px) {
+	@media screen and (min-width: 900px) {
 		.single.no-sidebar .post-content__wrap {
 			display: -webkit-box;
 			display: -ms-flexbox;
@@ -1111,7 +1111,7 @@ figure {
 	max-width: 100vw;
 	margin: 0 -1em;
 }
-@media screen with(min-width:600){
+@media screen and (min-width:600){
 	.wp-caption.aligncenter, .content-image{
 		margin: 0 -2em;
 	}
@@ -1220,7 +1220,7 @@ td:last-child {
 	.site-header {
 		padding: 1em 2em;
 	}
-}
+
 		.site-branding{
 			width: 35%;
 		}
@@ -1748,7 +1748,7 @@ ul.children.toggled-on,
 
 
 
-}
+
 
 
 /*--------------------------------------------------------------
@@ -2191,7 +2191,7 @@ ul.children.toggled-on,
 }
 
 .comment-metadata a:hover, .comment-metadata a:focus {
-	border-color: color: #800000;
+	border-color: #800000;
 }
 
 .comment-author {
@@ -2498,7 +2498,7 @@ object {
 }
 
 .gallery-item img a:hover, a:focus	img {
-	border-color: $color__interactive;
+	
 }
 
 
@@ -2539,7 +2539,6 @@ object {
 .gallery-caption {
 	display: block;
 	margin: 0;
-	font-family: $font__sans;
 	border: none;
 }
 
