@@ -311,8 +311,7 @@ th {
 
 @media screen and (min-width: 1080px) {
 	.full-bleed {
-		margin-right: calc( ((-100vw + 1080px)/2) - 2em);
-		margin-left: calc( ((-100vw + 1080px)/2) - 2em);
+	
 	}
 }
 
@@ -379,10 +378,10 @@ th {
 		        flex: 1 0 100%;
 	}
 	.archive-view.has-sidebar .content-area {
-		width: 60%;
+		width: 70%;
 	}
 	.archive-view.has-sidebar .widget-area {
-		width: 30%;
+		width: 20%;
 	}
 }
 
@@ -967,11 +966,11 @@ body {
 
 	.single.has-sidebar .hentry .post-content,
 	.page .hentry .post-content {
-		width: 60%;
+		width: 70%;
 	}
 	.single.has-sidebar .hentry .widget-area,
 	.page .hentry .widget-area {
-		width: 30%;
+		width: 20%;
 	}
 	.page.has-page-sidebar .hentry {
 		-webkit-box-orient: horizontal;
