@@ -1,3 +1,20 @@
+Skip to content
+Features
+Business
+Explore
+Marketplace
+Pricing
+This repository
+Search
+Sign in or Sign up
+ Watch 1  Star 0  Fork 0 fifenick/redRaven
+ Code  Issues 0  Pull requests 0  Projects 0  Insights
+Branch: master Find file Copy pathredRaven/style.css
+5e382cc  14 hours ago
+@fifenick fifenick Update style.css
+1 contributor
+RawBlameHistory
+2585 lines (2166 sloc)  43.3 KB
 /*!
 Theme Name: RedRaven
 Theme URI: http://underscores.me/
@@ -9,13 +26,10 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: redraven
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-
 RedRaven is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
@@ -311,7 +325,7 @@ th {
 
 @media screen and (min-width: 1080px) {
 	.full-bleed {
-	
+
 	}
 }
 
@@ -382,11 +396,14 @@ th {
 	}
 	.archive-view.has-sidebar .widget-area {
 		width: 20%;
+		border-left: 1px solid #e6e6e6;
+		background-color: #f2f2f2;
+		padding: 1em;
 	}
 }
 
 .page-header {
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	/*font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; */
 }
 
 .page-title {
@@ -424,8 +441,6 @@ th {
 	color: black;
 }
 
-
-
 .index-image img {
 	display: block;
 	margin: 0 auto;
@@ -451,15 +466,12 @@ th {
 	color: #800000 !important;
 }
 
-.continue-reading a:hover {
+.continue-reading a:hover, .continue-reading a:focus {
 	color: white;
 	text-decoration: underline;
 	background: #b51c35;
-
-}
-.continue-reading a:focus{
-	text-decoration: underline;
-	border:0;
+	border: 1px solid #b51c35;
+	border-radius: 0;
 }
 
 /*--------------------------------------------------------------
@@ -467,6 +479,8 @@ th {
 --------------------------------------------------------------*/
 .widget-area {
 	margin-top: 1.5em;
+	background-color: #f2f2f2;
+	padding: 1em;
 }
 
 /* Footer widgets for archive pages */
@@ -519,8 +533,9 @@ th {
 	color: black !important;
 }
 
-.widget a:hover, .widget a:focus {
+.site-content .widget a:hover, .widget a:focus {
 	border-bottom-color:black;
+		background-color: #f2f2f2;
 	color: #800000 !important;
 	border-radius: 0;
 }
@@ -532,9 +547,40 @@ th {
 	color: black !important;
 }
 
+element.style {
+}
+
+.site-content a:hover, a:focus {
+    background-color: #ffffff;
+    color: blue;
+}
+
+.widget_pages a:hover, .widget_pages a:focus, .widget_nav_menu a:hover, .widget_nav_menu a:focus {
+    text-decoration: none;
+    border-bottom: 1px dashed gray;
+}
+
+.widget a:hover, .widget a:focus {
+    border-bottom-color: black;
+		background-color: #f2f2f2;
+    color: #800000 !important;
+    border-radius: 0;
+}
+
+.site-content a {
+    color: blue;
+}
+
+.widget_pages a, .widget_nav_menu a {
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    border-bottom: 1px dashed gray;
+}
+
 .widget_pages a:hover, .widget_pages a:focus{
 	border-bottom-color:black;
-	background-color:transparent;
+  background-color: #f2f2f2 !important;
 	color: #800000 !important;
 }
 
@@ -542,7 +588,6 @@ th {
 	width: 100%;
 	height: 2.5em;
 	padding: 10px;
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	border: 1px solid #ccc;
 }
 
@@ -586,6 +631,7 @@ th {
 .widget_nav_menu a:focus {
 	text-decoration: none;
 	border-bottom: 1px dashed gray;
+	background-color: #f2f2f2 !important;
 }
 
 .widget_pages li,
@@ -1361,19 +1407,15 @@ textarea {
 a {
 	color: royalblue;
 }
-
 a:visited {
 	color: purple;
 }
-
 a:hover, a:focus, a:active {
 	color: midnightblue;
 }
-
 a:focus {
 	outline: thin dotted;
 }
-
 a:hover, a:active {
 	outline: 0;
 }
@@ -1392,29 +1434,24 @@ a:hover, a:active {
 	font-size: 1rem;
 	position: relative;
 }
-
 .navigation-top .wrap {
 	max-width: 1000px;
 	padding: 0;
 }
-
 .navigation-top a {
 	color: #222;
 	font-weight: 600;
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
-
 .navigation-top .current-menu-item > a,
 .navigation-top .current_page_item > a {
 	color: #767676;
 }
-
 .main-navigation {
 	clear: both;
 	display: block;
 }
-
 .main-navigation ul {
 	background: #fff;
 	list-style: none;
@@ -1422,62 +1459,47 @@ a:hover, a:active {
 	padding: 0 1.5em;
 	text-align: left;
 }
-
-
-
 .js .main-navigation ul,
 .main-navigation .menu-item-has-children > a > .icon,
 .main-navigation .page_item_has_children > a > .icon,
 .main-navigation ul a > .icon {
 	display: none;
 }
-
 .main-navigation > div > ul {
 	border-top: 1px solid #eee;
 	padding: 0.75em 1.695em;
 }
-
 .js .main-navigation.toggled-on > div > ul {
 	display: block;
 }
-
 .main-navigation ul ul {
 	padding: 0 0 0 1.5em;
 }
-
 .main-navigation ul ul.toggled-on {
 	display: block;
 }
-
 .main-navigation ul ul a {
 	letter-spacing: 0;
 	padding: 0.4em 0;
 	position: relative;
 	text-transform: none;
 }
-
 .main-navigation li {
 	border-bottom: 1px solid #eee;
 	position: relative;
 }
-
 .main-navigation li li,
 .main-navigation li:last-child {
 	border: 0;
 }
-
 .main-navigation a {
 	display: block;
 	padding: 0.5em 0;
 	text-decoration: none;
 }
-
 .main-navigation a:hover {
 	color: #767676;
 }
-
-
-
 .menu-toggle {
 	background-color: transparent;
 	border: 0;
@@ -1493,43 +1515,32 @@ a:hover, a:active {
 	padding: 1em;
 	text-shadow: none;
 }
-
-
 .js .menu-toggle {
 	display: block;
 }
-
 .main-navigation.toggled-on ul.nav-menu {
 	display: block;
 }
-
 .menu-toggle:hover,
 .menu-toggle:focus {
 	background-color: transparent;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-
 .menu-toggle:focus {
 	outline: thin solid;
 }
-
 .menu-toggle .icon {
 	margin-right: 0.5em;
 	top: -2px;
 }
-
 .toggled-on .menu-toggle .icon-bars,
 .menu-toggle .icon-close {
 	display: none;
 }
-
 .toggled-on .menu-toggle .icon-close {
 	display: inline-block;
 }
-
-
-
 .dropdown-toggle {
 	background-color: transparent;
 	border: 0;
@@ -1546,33 +1557,22 @@ a:hover, a:active {
 	text-shadow: none;
 	top: 0;
 }
-
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
 	background: transparent;
 }
-
 .dropdown-toggle:focus {
 	outline: thin dotted;
 }
-
 .dropdown-toggle.toggled-on .icon {
 	-ms-transform: rotate(-180deg);
 	-webkit-transform: rotate(-180deg);
 	transform: rotate(-180deg);
 }
-
-
-
 .site-header .menu-scroll-down {
 	display: none;
 }
-
 /
-
-
-
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -1792,6 +1792,7 @@ ul.children.toggled-on,
 .entry-title{
 	margin: .125em .25em;
 	font-size: 2.5em;
+	padding-bottom: 0.1em;
 	 border-bottom: 1px solid black;
 }
 
@@ -1806,7 +1807,7 @@ ul.children.toggled-on,
 }
 
 .entry-title a:hover,.entry-title a:focus {
-	text-decoration: underline;
+	text-decoration: none;
 	background-color: #ffffff;
 	color: black;
 	color: #800000;
@@ -2309,6 +2310,7 @@ ul.children.toggled-on,
 	color:#fff;
 	background-color: black;
 	border-bottom: 1px solid red;
+	border-top: 1px solid red;
 	text-align: center;
 }
 @media screen and (min-width: 900px) {
@@ -2497,7 +2499,7 @@ object {
 }
 
 .gallery-item img a:hover, a:focus	img {
-	
+
 }
 
 
@@ -2581,4 +2583,26 @@ SVG Fallbacks
 	position: relative !important;
 	/* overrides previous !important styles */
 	width: auto;
+}
+
+#menu-footer a{
+	margin: 0;
+	padding: 0;
+	padding: .5em 1em;
+	color:#ffffff;
+	text-decoration: underline;
+}
+
+#menu-footer a:hover, #menu-footer a:focus{
+	font-weight: bold;
+}
+.site-info a{
+	margin: 0;
+	padding: 0;
+	padding: .5em 1em;
+	color:#ffffff;
+	text-decoration: underline;
+}
+.site-info a:hover, .site-info a:focus{
+font-weight: bold;
 }
