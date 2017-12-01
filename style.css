@@ -1,20 +1,3 @@
-Skip to content
-Features
-Business
-Explore
-Marketplace
-Pricing
-This repository
-Search
-Sign in or Sign up
- Watch 1  Star 0  Fork 0 fifenick/redRaven
- Code  Issues 0  Pull requests 0  Projects 0  Insights
-Branch: master Find file Copy pathredRaven/style.css
-5e382cc  14 hours ago
-@fifenick fifenick Update style.css
-1 contributor
-RawBlameHistory
-2585 lines (2166 sloc)  43.3 KB
 /*!
 Theme Name: RedRaven
 Theme URI: http://underscores.me/
@@ -366,15 +349,36 @@ th {
 	background: white;
 	padding: 1em;
 	border: 1px solid #e6e6e6;
+
 }
 .archive-view .entry-content{
 	padding: 1em;
+	padding-top: 1em;
+	padding-left:1em;
+	padding-right:2em;
+		padding-bottom: 4em;
+}
+
+@media screen and (min-width: 900px) {
+	.archive-view .entry-content{
+	padding-bottom: 2em;
+}
+}
+
+@media screen and (min-width: 600px) {
+	.archive-view .entry-content{
+	padding-bottom: 1em;
+}
 }
 .archive-view .post__content {
 	padding: 2em 2em 3em;
 }
 
 @media screen and (min-width: 900px) {
+	.archive-view .post,
+.archive-view .page {
+	box-shadow: 2px 1px 1px #888888;
+	}
 	.archive-view.has-sidebar .site-content {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -396,7 +400,7 @@ th {
 	}
 	.archive-view.has-sidebar .widget-area {
 		width: 20%;
-		border-left: 1px solid #e6e6e6;
+		border-left: 6px solid #e6e6e6;
 		background-color: #f2f2f2;
 		padding: 1em;
 	}
@@ -472,19 +476,23 @@ th {
 	background: #b51c35;
 	border: 1px solid #b51c35;
 	border-radius: 0;
+	background-color: #ffffff;
 }
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget-area {
-	margin-top: 1.5em;
 	background-color: #f2f2f2;
 	padding: 1em;
+		margin-top: 4.5em;
 }
 
 /* Footer widgets for archive pages */
 @media screen and (min-width: 900px) {
+.widget-area {
+	margin-top: 0.2em;
+}
 	.archive-view.has-sidebar .footer-widgets {
 		width: 100%;
 	}
@@ -1017,6 +1025,7 @@ body {
 	.single.has-sidebar .hentry .widget-area,
 	.page .hentry .widget-area {
 		width: 20%;
+		border-left: 6px solid #e6e6e6;;
 	}
 	.page.has-page-sidebar .hentry {
 		-webkit-box-orient: horizontal;
@@ -1858,7 +1867,6 @@ ul.children.toggled-on,
 .site-main .posts-navigation, .site-main
 .post-navigation {
 	margin: 2em 0.5em 1.5em;
-	overflow: hidden;
 }
 
 .comment-navigation .nav-previous,
@@ -1884,8 +1892,25 @@ ul.children.toggled-on,
 .paging-navigation {
 	padding: 0em 1em;
 	text-align: left;
-	overflow: hidden;
+	/* overflow: hidden; */
 	text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+	.comment-navigation a,
+	.posts-navigation a,
+	.post-navigation a,
+	.paging-navigation a {
+				width: 97%;
+		}
+}
+@media screen and (min-width: 900px) {
+	.comment-navigation a,
+	.posts-navigation a,
+	.post-navigation a,
+	.paging-navigation a {
+			width: 30%;
+		}
 }
 
 
@@ -1894,15 +1919,50 @@ ul.children.toggled-on,
 .posts-navigation a,
 .post-navigation a,
 .paging-navigation a {
-		display: block;
-		width: 90%;
-		text-decoration: underline;
+		text-decoration: none;
 		padding: 1em 1em;
 		border: 1px solid hsl(0, 0%, 80%);
 		border-radius: 6px;
 		color: black;
-		background-color: #e6e6e6;
+		background-color: transparent;
 	}
+
+.post-navigation .nav-links ::after{
+	content: "";
+}
+
+.pagination .nav-links a {
+		margin: 1em;
+		color: black;
+		border: 0;
+		font-size: 1em;
+}
+
+.pagination .nav-links a:hover, .pagination .nav-links a:focus {
+		margin: 1em;
+		color: #ffffff;
+}
+
+@media screen and (min-width: 600px) {
+    .pagination .nav-links a
+		.pagination .nav-links a:hover,
+		.pagination .nav-links a:focus
+		 {
+        	border: 1px solid hsl(0, 0%, 80%);
+    }
+}
+
+.pagination .dots{
+	margin: 1em;
+	color: black;
+}
+
+.pagination .current{
+	color:#ffffff;
+	font-weight: bold;
+	border: 1px solid hsl(0, 0%, 80%);
+		margin: 1em;
+}
 
 
 .comment-navigation a:hover,.comment-navigation a:focus,
@@ -1910,12 +1970,22 @@ ul.children.toggled-on,
 	.post-navigation a:hover, .post-navigation a:focus,
 	.paging-navigation a:hover, .paging-navigation a:focus {
 			color: #800000;
-			border-color: #800000;
+
 			background-color: transparent;
-			border: 1px solid #800000;
-			border-radius: 6px;
+			text-decoration: none;
 		}
 
+@media screen and (min-width: 600px) {
+
+	.comment-navigation a:hover,.comment-navigation a:focus,
+		.posts-navigation a:hover,.posts-navigation a:focus,
+		.post-navigation a:hover, .post-navigation a:focus,
+		.paging-navigation a:hover, .paging-navigation a:focus {
+	border: 1px solid #800000;
+	border-radius: 6px;
+				border-color: #800000;
+}
+}
 
 		span.meta-nav{
 			text-decoration: none;
@@ -1942,8 +2012,15 @@ ul.children.toggled-on,
 
 		.pagination a,
 		.pagination span {
-			padding: .5em 1em;
 			background: white;
+		}
+
+		@media screen and (min-width: 480px) {
+			.pagination a,
+			.pagination span {
+				padding: .5em 1em;
+			}
+
 		}
 
 		.pagination a {
@@ -2072,9 +2149,10 @@ ul.children.toggled-on,
 	width: 100%;
 	margin: 3em 0;
 	padding: 1.5em 0;
-	border-top: 1px solid #cccccc;
 }
-
+.reply-title{
+		border-top: 1px solid #cccccc;
+}
 .comments-title {
 	margin-bottom: 2em;
 	font-size: 2.5em;
