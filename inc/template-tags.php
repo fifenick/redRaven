@@ -111,12 +111,10 @@ function redraven_categories_list(){
  */
 function redraven_post_navigation() {
 	the_post_navigation( array(
-		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'redraven' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Next post:', 'redraven' ) . '</span> ' .
-			'<span class="post-title">%title</span>',
-		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'redraven' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Previous post:', 'redraven' ) . '</span> ' .
-			'<span class="post-title">%title</span>',
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post >>', 'redraven' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next post:', 'redraven' ) . '</span> ',
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( '<< Previous Post', 'redraven' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous post:', 'redraven' ) . '</span> ',
 	) );
 }
 
